@@ -1,0 +1,165 @@
+            <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush H Rao - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0f0f0f;
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #000000, #1a1a1a);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            color: #ff9800;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px #ff9800;
+            }
+
+            100% {
+                text-shadow: 0 0 25px #ff9800;
+            }
+        }
+
+        h2 {
+            font-weight: 300;
+            color: #ddd;
+            margin-top: 10px;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff9800;
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        section h2 {
+            margin-bottom: 15px;
+            font-size: 2rem;
+            color: #ff9800;
+        }
+
+        section p {
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        footer {
+            background: #111;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Fade-in Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-in-out;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <header>
+        <h1>Ayush H Rao</h1>
+        <h2>AI&DS Engineer| GLOBAL ACADEMY OF TECHNOLOGY |3rd year </h2>
+    </header>
+
+    <section id="about" class="fade-in">
+        <h2>About Me</h2>
+        <p>Hello! I’m Ayush H Rao, passionate about technology, coding, and creative problem-solving. I love building
+            web apps, exploring machine learning, and creating user-friendly solutions. This portfolio is my little
+            corner of the internet to showcase my skills and journey.</p>
+    </section>
+
+    <section id="skills" class="fade-in">
+        <h2>Skills</h2>
+        <p>💻 Python | JavaScript | HTML & CSS | Machine Learning | Data Analysis</p>
+    </section>
+
+    <section id="contact" class="fade-in">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:ayushhraoayush78@gmail.com" style="color:#ff9800;">ayushhraoayush78@gmail.com</a></p>
+    </section>
+
+    <footer>
+        &copy; 2025 Ayush H Rao. All rights reserved.
+    </footer>
+
+    <script>
+        // Fade-in effect on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        window.addEventListener('scroll', () => {
+            faders.forEach(fader => {
+                const rect = fader.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    fader.classList.add('show');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
